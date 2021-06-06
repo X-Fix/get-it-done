@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { nanoid } from 'nanoid';
 
 import './App.css';
 import { Column, TColumn } from './components/Column';
 
-const columns: TColumn[] = [
+const initialState: TColumn[] = [
   {
     id: nanoid(),
     label: 'Column 1',
@@ -40,13 +40,33 @@ const columns: TColumn[] = [
 ];
 
 function App() {
+  const [columns, setColumns] = useState(initialState);
+  const addColumn = () => {
+    setColumns([
+      ...columns,
+      {
+        id: nanoid(),
+        label: `Column ${columns.length + 1}`,
+        order: columns.length,
+        cards: [],
+      },
+    ]);
+  };
+
   return (
     <div className="app">
       <h1 className="app__heading">Get it done!</h1>
       <ul className="app__column-list">
-        {columns.map((column) => (
-          <Column {...column} />
-        ))}
+        <>
+          {columns.map((column) => (
+            <Column key={column.id} {...column} />
+          ))}
+          <li className="app__add-column">
+            <button className="app__add-column-button" onClick={addColumn}>
+              + Add New Column
+            </button>
+          </li>
+        </>
       </ul>
     </div>
   );
