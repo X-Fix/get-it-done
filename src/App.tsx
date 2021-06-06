@@ -1,24 +1,53 @@
 import React from 'react';
-import logo from './logo.svg';
+import { nanoid } from 'nanoid';
+
 import './App.css';
+import { Column, TColumn } from './components/Column';
+
+const columns: TColumn[] = [
+  {
+    id: nanoid(),
+    label: 'Column 1',
+    cards: [
+      {
+        id: nanoid(),
+        label: 'Card 3',
+        description: 'The last task on my to-do list',
+        order: 0,
+      },
+    ],
+    order: 0,
+  },
+  {
+    id: nanoid(),
+    label: 'Column 2',
+    cards: [
+      {
+        id: nanoid(),
+        label: 'Card 1',
+        description: 'The first task on my to-do list',
+        order: 0,
+      },
+      {
+        id: nanoid(),
+        label: 'Card 2',
+        description: 'The second task on my to-do list',
+        order: 1,
+      },
+    ],
+    order: 1,
+  },
+];
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <h1 className="app__heading">Get it done!</h1>
+      <ul className="app__column-list">
+        {columns.map((column) => (
+          <Column {...column} />
+        ))}
+      </ul>
     </div>
   );
 }

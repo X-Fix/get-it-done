@@ -1,0 +1,16 @@
+.column {
+  min-width: 20rem;
+}
+
+.column:not(:last-child) {
+  margin-right: 0.5rem;
+}
+
+.column__label {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.column__cards-list {
+  list-style-type: none;
+}
