@@ -1,4 +1,4 @@
-import { TCard } from '../Card';
+import TCard from './Card';
 
 type TColumn = {
   id: string;

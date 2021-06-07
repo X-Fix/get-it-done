@@ -1,5 +1,5 @@
 import React, { ReactElement } from 'react';
-import TCard from './types';
+import { TCard } from '../../types';
 import './Card.css';
 
 function Card({ id, label, description }: TCard): ReactElement {
