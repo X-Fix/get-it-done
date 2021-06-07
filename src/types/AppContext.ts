@@ -12,8 +12,8 @@ type TAppState = {
     cardDescription: string
   ) => void;
   moveCardToColumn: (
-    oldColumnId: string,
-    newColumnId: string,
+    columnId: string,
+    direction: 'left' | 'right',
     cardId: string
   ) => void;
 };

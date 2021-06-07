@@ -103,11 +103,11 @@ function useAppContext(initialState?: TColumn[]): TAppContext {
   }
 
   function _moveCardToColumn(
-    oldColumnId: string,
-    newColumnId: string,
+    columnId: string,
+    direction: 'left' | 'right',
     cardId: string
   ): void {
-    _setState(moveCardToColumn(_columns, { oldColumnId, newColumnId, cardId }));
+    _setState(moveCardToColumn(_columns, { columnId, direction, cardId }));
   }
 
   return {
