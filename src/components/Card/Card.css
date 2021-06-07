@@ -2,18 +2,62 @@
   background: white;
   border-radius: 5px;
   box-shadow: 1px 1px 1px lightgrey;
-  padding: 0.5rem;
+  padding: 0.25rem;
+  position: relative;
 }
 
 .card:not(:last-child) {
   margin-bottom: 0.375rem;
 }
 
+.card__move-button {
+  background-color: rgba(0, 0, 0, 0.1);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  opacity: 0;
+  padding: 0.25rem;
+  position: absolute;
+  top: 0.5rem;
+  transition: opacity 0.2s;
+  width: 1.5rem;
+}
+
+.card:hover .card__move-button {
+  opacity: 1;
+}
+
+.card__move-button--left {
+  right: 2.5rem;
+}
+
+.card__move-button--right {
+  right: 0.75rem;
+}
+
 .card__label {
+  background: transparent;
+  border: none;
+  box-sizing: border-box;
+  font-family: Arial;
   font-size: 1.25rem;
-  margin-bottom: 0.5rem;
+  overflow: hidden;
+  padding: 0.25rem;
+  resize: none;
+  width: 75%;
 }
 
 .card__description {
+  background: transparent;
+  border: none;
+  box-sizing: border-box;
+  color: #333;
+  font-family: Arial;
   font-size: 1.125rem;
+  height: 1.25rem;
+  overflow: hidden;
+  padding: 0.25rem;
+  resize: none;
+  width: 100%;
 }

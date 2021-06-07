@@ -10,7 +10,15 @@
 }
 
 .column__label {
+  background: transparent;
+  border: none;
+  box-sizing: border-box;
+  font-family: Arial;
   font-size: 1.5rem;
+  height: 1.875rem;
+  overflow: hidden;
+  resize: none;
+  width: 100%;
 }
 
 .column__cards-list {
