@@ -10,10 +10,10 @@ export default function setColumnLabel(
 ): TColumn[] {
   const columnIndex = findIndex(columns, { id: columnId });
   const column = columns[columnIndex];
-  const updateColumn = {
+  const updatedColumn = {
     ...column,
     label: columnLabel,
   };
 
-  return replaceAtIndex(columns, updateColumn, columnIndex) as TColumn[];
+  return replaceAtIndex(columns, updatedColumn, columnIndex) as TColumn[];
 }
