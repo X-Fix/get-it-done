@@ -1,6 +1,7 @@
 .app {
   background: paleturquoise;
   box-sizing: border-box;
+  color: #181818;
   font-family: Arial;
   height: 100vh;
   padding: 1rem;
