@@ -1,5 +1,5 @@
 .app {
-  background: paleturquoise;
+  background: rgba(20, 159, 214, 0.6);
   box-sizing: border-box;
   color: #181818;
   font-family: Arial;
@@ -24,7 +24,7 @@
 }
 
 .app__add-column-button {
-  background-color: rgba(173, 216, 230, 0.7);
+  background-color: rgba(8, 121, 228, 0.25);
   border: none;
   border-radius: 5px;
   cursor: pointer;

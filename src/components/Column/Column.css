@@ -1,5 +1,5 @@
 .column {
-  background: lightblue;
+  background: rgba(8, 121, 228, 0.5);
   border-radius: 5px;
   min-width: 20rem;
   padding: 0.5rem;
@@ -27,7 +27,7 @@
 }
 
 .column__add-card-button {
-  background: transparent;
+  background: rgba(255, 255, 255, 0.5);
   border: none;
   border-radius: 5px;
   cursor: pointer;
