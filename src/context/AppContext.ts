@@ -17,8 +17,9 @@ const defaultState = [
     cards: [
       {
         id: nanoid(),
-        label: 'Card 3',
-        description: 'The last task on my to-do list',
+        label: '> Click me! <',
+        description:
+          "Click this card's heading or description to edit the text",
         order: 0,
       },
     ],
@@ -30,14 +31,23 @@ const defaultState = [
     cards: [
       {
         id: nanoid(),
-        label: 'Card 1',
-        description: 'The first task on my to-do list',
+        label: 'Add more of me!',
+        description:
+          'Click the "+ Add New Card" or "+ Add New Column" button to add another of the respective items',
         order: 0,
       },
       {
         id: nanoid(),
-        label: 'Card 2',
-        description: 'The second task on my to-do list',
+        label: 'Move me!',
+        description:
+          'Use the arrows in the top-right corner of this card to move it between columns',
+        order: 1,
+      },
+      {
+        id: nanoid(),
+        label: 'Edit the title!',
+        description:
+          "That's right! you can even change the name of this trello board by editing the title in the top-left corner of the page",
         order: 1,
       },
     ],
