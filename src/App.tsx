@@ -1,12 +1,30 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import './App.css';
 import { Column } from './components/Column';
 import { AppContext, useAppContext } from './context/AppContext';
 
+const getStateFromStorage = () => {
+  try {
+    const stateString = window.localStorage.getItem('state');
+
+    if (stateString !== null) {
+      return JSON.parse(stateString);
+    }
+  } catch (jsonParseError) {
+    window.localStorage.clear();
+  }
+};
+
+const initialState = getStateFromStorage();
+
 function App() {
-  const context = useAppContext();
+  const context = useAppContext(initialState);
   const { columns, addColumn } = context;
+
+  useEffect(() => {
+    window.localStorage.setItem('state', JSON.stringify(columns));
+  }, [columns]);
 
   return (
     <AppContext.Provider value={context}>
