@@ -1,10 +1,14 @@
-# Getting Started with Create React App
+# Get it done!
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
 In the project directory, you can run:
+
+### `yarn`
+
+Installs all the dependencies required to run the app
 
 ### `yarn start`
 
@@ -16,31 +20,25 @@ You will also see any lint errors in the console.
 
 ### `yarn test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Launches the test runner in the interactive watch mode.
 
-### `yarn build`
+## If only we had more time...
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This was a lot of fun, though I felt like the 4 hours ran out a lot faster than I was expecting
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Choices made
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Most decisions around feature implementations were made based on the limited time, for example
 
-### `yarn eject`
+- Arrow buttons to move cards, instead of drag-and-drop
+- Nested card collection inside column collection, instead of flat arrays with referenceIds
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Features left forgotten
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+This app feels very rough around the edges because of the feature set I had to leave out to make the deadline. If i'd had more time to polish, these are the first things that come to mind that I consider missing
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Better keyboard and accessibility interaction
+- Atomic components (abstract common styles, eg. card and column textareas)
+- SVG icons instead of characters (eg. + and >)
+- Better user input validation (provide default/fallback values for blank textareas)
+- Unit tests for actions and utils
